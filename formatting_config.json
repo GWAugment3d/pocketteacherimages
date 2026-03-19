@@ -1,0 +1,117 @@
+{
+  "layout": {
+    "maxWidth": 420,
+    "horizontalPadding": 16,
+    "sectionGap": 16,
+    "elementGap": 8
+  },
+
+  "typography": {
+    "title": {
+      "font": "Permanent Marker",
+      "size": 26,
+      "weight": 600,
+      "color": "#6A0DAD",
+      "marginBottom": 8
+    },
+    "sectionHeader": {
+      "font": "Inter",
+      "size": 17,
+      "weight": 700,
+      "color": "#1f2937",
+      "marginTop": 16,
+      "marginBottom": 6
+    },
+    "body": {
+      "font": "Inter",
+      "size": 15,
+      "weight": 400,
+      "color": "#1f2937",
+      "lineHeight": 1.45
+    },
+    "label": {
+      "font": "Inter",
+      "size": 12,
+      "weight": 700,
+      "letterSpacing": 0.08,
+      "color": "#6b7280"
+    }
+  },
+
+  "bullets": {
+    "style": "icon + bold term + colon",
+    "gap": 6,
+    "iconSize": 18
+  },
+
+  "sections": {
+    "default": {
+      "type": "plain",
+      "background": "transparent"
+    },
+
+    "frostedCard": {
+      "background": "rgba(255,255,255,0.65)",
+      "backdropBlur": 6,
+      "borderRadius": 12,
+      "padding": 12,
+      "shadow": {
+        "color": "rgba(0,0,0,0.08)",
+        "blur": 12,
+        "y": 4
+      }
+    },
+
+    "knowledgeCheck": {
+      "background": "#EFF6FF",
+      "borderLeft": "4px solid #2563EB",
+      "borderRadius": 10,
+      "padding": 12,
+      "headerColor": "#2563EB"
+    },
+
+    "finalCheck": {
+      "background": "#ECFDF5",
+      "borderLeft": "4px solid #16A34A",
+      "borderRadius": 10,
+      "padding": 14,
+      "headerColor": "#16A34A"
+    }
+  },
+
+  "sectionTypes": {
+    "keyContent": {
+      "style": "plain"
+    },
+    "benefits": {
+      "style": "plain",
+      "headerColor": "#16A34A"
+    },
+    "drawbacks": {
+      "style": "plain",
+      "headerColor": "#DC2626"
+    },
+    "businessImpact": {
+      "style": "frostedCard"
+    },
+    "realExample": {
+      "style": "frostedCard"
+    },
+    "knowledgeCheck": {
+      "style": "knowledgeCheck",
+      "label": "CHECK"
+    },
+    "finalCheck": {
+      "style": "finalCheck",
+      "label": "TEST"
+    }
+  },
+
+  "rules": {
+    "maxHeadingLevels": 3,
+    "noHandwrittenBelowTitle": true,
+    "noRandomSpacing": true,
+    "bulletsMustBeConsistent": true,
+    "cardsOnlyForHighValueSections": true
+  }
+}
