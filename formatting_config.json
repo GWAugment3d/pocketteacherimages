@@ -1,117 +1,251 @@
 {
+  "version": "1.0.0",
+  "description": "PocketTeacher content formatting and semantic section styling config. Controls lesson content presentation only. Does not override core UI components.",
+
+  "scope": {
+    "controls": [
+      "lesson content typography",
+      "section header styling",
+      "content spacing",
+      "semantic content containers",
+      "case study presentation",
+      "knowledge check presentation",
+      "final quiz presentation",
+      "progressive reveal flow rules"
+    ],
+    "doesNotControl": [
+      "multiple choice buttons",
+      "answer tiles",
+      "chat input bar",
+      "navigation UI",
+      "menu buttons",
+      "send button",
+      "footer UI",
+      "existing app shell components"
+    ],
+    "uiComponentsOverrideConfig": true
+  },
+
+  "flowRules": {
+    "mobileFirst": true,
+    "forceProgressiveReveal": true,
+    "maxSectionsPerResponse": 1,
+    "maxBulletsPerSection": 3,
+    "maxParagraphsPerSection": 2,
+    "maxLinesPerParagraph": 3,
+    "avoidTextbookStacking": true,
+    "preferChatFeedRhythm": true
+  },
+
   "layout": {
     "maxWidth": 420,
     "horizontalPadding": 16,
+    "verticalPadding": 10,
     "sectionGap": 16,
-    "elementGap": 8
+    "elementGap": 8,
+    "cardPadding": 12,
+    "cardRadius": 12
   },
 
   "typography": {
     "title": {
-      "font": "Permanent Marker",
-      "size": 26,
-      "weight": 600,
+      "fontFamily": "Permanent Marker",
+      "fontSize": 26,
+      "fontWeight": 600,
+      "lineHeight": 1.15,
       "color": "#6A0DAD",
       "marginBottom": 8
     },
     "sectionHeader": {
-      "font": "Inter",
-      "size": 17,
-      "weight": 700,
+      "fontFamily": "Inter",
+      "fontSize": 17,
+      "fontWeight": 700,
+      "lineHeight": 1.2,
       "color": "#1f2937",
-      "marginTop": 16,
+      "marginTop": 14,
       "marginBottom": 6
     },
-    "body": {
-      "font": "Inter",
-      "size": 15,
-      "weight": 400,
-      "color": "#1f2937",
-      "lineHeight": 1.45
+    "sectionHeaderAccent": {
+      "fontFamily": "Permanent Marker",
+      "fontSize": 16,
+      "fontWeight": 600,
+      "lineHeight": 1.15
     },
-    "label": {
-      "font": "Inter",
-      "size": 12,
-      "weight": 700,
+    "body": {
+      "fontFamily": "Inter",
+      "fontSize": 15,
+      "fontWeight": 400,
+      "lineHeight": 1.45,
+      "color": "#1f2937"
+    },
+    "bodyEmphasis": {
+      "fontWeight": 700,
+      "color": "#0f172a"
+    },
+    "microLabel": {
+      "fontFamily": "Inter",
+      "fontSize": 11,
+      "fontWeight": 700,
+      "lineHeight": 1.1,
       "letterSpacing": 0.08,
+      "textTransform": "uppercase",
       "color": "#6b7280"
     }
   },
 
-  "bullets": {
-    "style": "icon + bold term + colon",
-    "gap": 6,
-    "iconSize": 18
+  "colors": {
+    "backgroundPaper": "#f5f5f4",
+    "textPrimary": "#1f2937",
+    "textSecondary": "#6b7280",
+    "teacherPurple": "#6A0DAD",
+    "ao1Amber": "#D97706",
+    "ao2Blue": "#2563EB",
+    "ao3Green": "#16A34A",
+    "dangerRed": "#DC2626",
+    "frostedWhite": "rgba(255,255,255,0.68)",
+    "checkBlueBg": "#EFF6FF",
+    "checkBlueBorder": "#2563EB",
+    "finalGreenBg": "#ECFDF5",
+    "finalGreenBorder": "#16A34A",
+    "caseStudyPaper": "#f8f5ef"
   },
 
-  "sections": {
-    "default": {
-      "type": "plain",
-      "background": "transparent"
-    },
+  "bullets": {
+    "style": "icon + bold term + colon + short explanation",
+    "iconSize": 18,
+    "itemGap": 6,
+    "termWeight": 700,
+    "allowEmojiIcons": true,
+    "maxItems": 3
+  },
 
+  "containers": {
+    "plain": {
+      "background": "transparent",
+      "border": "none",
+      "shadow": "none",
+      "padding": 0,
+      "radius": 0
+    },
     "frostedCard": {
-      "background": "rgba(255,255,255,0.65)",
+      "background": "rgba(255,255,255,0.68)",
       "backdropBlur": 6,
-      "borderRadius": 12,
-      "padding": 12,
+      "border": "1px solid rgba(255,255,255,0.35)",
       "shadow": {
         "color": "rgba(0,0,0,0.08)",
         "blur": 12,
         "y": 4
-      }
+      },
+      "padding": 12,
+      "radius": 12
     },
-
-    "knowledgeCheck": {
+    "checkCard": {
       "background": "#EFF6FF",
       "borderLeft": "4px solid #2563EB",
-      "borderRadius": 10,
+      "shadow": {
+        "color": "rgba(37,99,235,0.08)",
+        "blur": 10,
+        "y": 3
+      },
       "padding": 12,
-      "headerColor": "#2563EB"
+      "radius": 12
     },
-
-    "finalCheck": {
+    "finalCard": {
       "background": "#ECFDF5",
       "borderLeft": "4px solid #16A34A",
-      "borderRadius": 10,
+      "shadow": {
+        "color": "rgba(22,163,74,0.08)",
+        "blur": 10,
+        "y": 3
+      },
+      "padding": 12,
+      "radius": 12
+    },
+    "tornPaper": {
+      "background": "#f8f5ef",
+      "border": "1px solid rgba(0,0,0,0.04)",
+      "shadow": {
+        "color": "rgba(0,0,0,0.10)",
+        "blur": 14,
+        "y": 6
+      },
       "padding": 14,
-      "headerColor": "#16A34A"
+      "radius": 12,
+      "texture": "paper",
+      "edgeStyle": "torn"
     }
   },
 
   "sectionTypes": {
+    "topicTitle": {
+      "container": "plain",
+      "headerStyle": "title"
+    },
+    "contentIntro": {
+      "container": "plain",
+      "headerStyle": "sectionHeader"
+    },
     "keyContent": {
-      "style": "plain"
+      "container": "plain",
+      "headerStyle": "sectionHeaderAccent",
+      "headerColor": "#D97706"
     },
     "benefits": {
-      "style": "plain",
+      "container": "plain",
+      "headerStyle": "sectionHeaderAccent",
       "headerColor": "#16A34A"
     },
     "drawbacks": {
-      "style": "plain",
+      "container": "plain",
+      "headerStyle": "sectionHeaderAccent",
       "headerColor": "#DC2626"
     },
     "businessImpact": {
-      "style": "frostedCard"
+      "container": "frostedCard",
+      "headerStyle": "sectionHeaderAccent",
+      "headerColor": "#D97706"
     },
     "realExample": {
-      "style": "frostedCard"
+      "container": "frostedCard",
+      "headerStyle": "sectionHeaderAccent",
+      "headerColor": "#D97706"
+    },
+    "caseStudy": {
+      "container": "tornPaper",
+      "headerStyle": "sectionHeader",
+      "headerColor": "#1f2937",
+      "titleStyle": "sectionHeader",
+      "questionStyle": "bodyEmphasis"
     },
     "knowledgeCheck": {
-      "style": "knowledgeCheck",
-      "label": "CHECK"
+      "container": "checkCard",
+      "headerStyle": "sectionHeaderAccent",
+      "headerColor": "#2563EB",
+      "microLabel": "CHECK"
     },
     "finalCheck": {
-      "style": "finalCheck",
-      "label": "TEST"
+      "container": "finalCard",
+      "headerStyle": "sectionHeaderAccent",
+      "headerColor": "#16A34A",
+      "microLabel": "TEST"
     }
   },
 
-  "rules": {
+  "caseStudyRules": {
+    "useTornPaperContainer": true,
+    "keepSeparateFromNormalLessonFlow": true,
+    "showAsSpecialArtifact": true,
+    "maxVisibleParagraphsBeforeQuestion": 3,
+    "questionMustBeVisuallySeparated": true
+  },
+
+  "renderRules": {
     "maxHeadingLevels": 3,
-    "noHandwrittenBelowTitle": true,
-    "noRandomSpacing": true,
-    "bulletsMustBeConsistent": true,
-    "cardsOnlyForHighValueSections": true
+    "noHandwrittenBelowTitleExceptSectionAccents": false,
+    "cardsOnlyForSemanticSections": true,
+    "doNotInventNewVisualSystems": true,
+    "fallbackToNearestExistingStyle": true,
+    "keepChecksVisuallyDistinct": true,
+    "preserveWhitespaceDiscipline": true
   }
 }
