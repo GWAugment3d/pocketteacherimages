@@ -1,0 +1,26 @@
+{
+  "name": "gold_standard_lesson_v1",
+  "description": "Defines required depth and structure for all mini-lessons",
+  "structure": [
+    "core_idea",
+    "structured_breakdown",
+    "multiple_examples",
+    "application",
+    "exam_link"
+  ],
+  "rules": {
+    "min_subpoints": 3,
+    "min_explanation_per_point": "2-3 lines",
+    "requires_example": true,
+    "requires_application": true,
+    "requires_exam_link": true
+  },
+  "fail_conditions": [
+    "single_sentence_explanations",
+    "less_than_3_subpoints",
+    "no_real_world_example",
+    "no_application",
+    "glossary_style_output"
+  ],
+  "reference_note": "All lessons must match the Stakeholders Gold Standard Lesson in depth and teaching style"
+}
